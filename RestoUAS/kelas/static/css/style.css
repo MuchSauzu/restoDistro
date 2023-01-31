@@ -1,0 +1,17 @@
+.background{
+    background-color: rgba(0, 0, 0, 0.63);
+    padding: 100px;
+}
+.kolom{
+    width: max-content;
+}
+.about{
+    background: url("../img/khas.jpg");
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}

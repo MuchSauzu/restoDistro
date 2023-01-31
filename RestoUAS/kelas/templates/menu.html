@@ -1,0 +1,29 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block konten %}
+<div class="background">
+<h2 class="align-center">Daftar Menu</h2>
+<table class="table table-dark table-striped">
+    <tr>
+        <th>Kode Barang</th>
+        <th>Nama</th>
+        <th>Stok</th>
+        <th>Harga</th>
+        <th>Link Gambar</th>
+        <th>Jenis</th>
+    </tr>
+
+{% for Barang in barangs %}
+    <tr>
+        <td>{{ Barang.kodebrg }}</td>
+        <td>{{ Barang.nama }}</td>
+        <td>{{ Barang.stok }}</td>
+        <td>{{ Barang.harga }}</td>
+        <td>{{ Barang.link_gbr }}</td>
+        <td>{{ Barang.jenis_id_id }}</td>
+    </tr>
+{% endfor %}
+</table>
+</div>
+{% endblock %}
+

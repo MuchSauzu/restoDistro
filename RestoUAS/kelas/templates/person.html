@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block konten %}
+<div class="background">
+<h2 class="align-center">Person</h2>
+<table class="table table-dark table-striped">
+    <tr>
+        <th>User ID</th>
+        <th>Nama</th>
+        <th>Usia</th>
+        <th>Lama Kerja</th>
+        <th>Link Foto</th>
+    </tr>
+
+{% for Administrasi in Administrasis %}
+    <tr>
+        <td>{{ Administrasi.userid }}</td>
+        <td>{{ Administrasi.nama }}</td>
+        <td>{{ Administrasi.usia }}</td>
+        <td>{{ Administrasi.lama }}</td>
+        <td>{{ Administrasi.link_foto }}</td>
+    </tr>
+{% endfor %}
+</table>
+</div>
+{% endblock %}

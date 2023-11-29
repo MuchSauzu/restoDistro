@@ -1,0 +1,35 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block konten %}
+
+<div class="background">
+ <section id="form" style="margin: 100px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                {% for message in messages %}
+                    {% if message %}
+                        <div class="alert alert-success">{{ message }}</div>
+                    {% endif %}
+                {% endfor %}
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    {{form.as_p}}
+                    <div class="kolom">
+                    <tr>
+                        <td>
+                            <button type="submit" class="btn btn-primary">Tambah</button>
+                        </td>
+                        <td>
+                            <a href="/Vbrg" class="btn btn-danger">Kembali</a>
+                        </td>
+                    </tr>
+                    </div>
+                </form>
+            </div>
+        </div>
+       </div>
+ </section>
+</div>
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% load static %}
+
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container px-4 px-lg-5">
+      <a class="navbar-brand" href="/">RestroDistro</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="#projects">Mainstay</a></li>
+              <li class="nav-item"><a class="nav-link" href="#signup">Contact</a></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Tabel
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/Vperson"><span class="material-symbols-outlined">person</span>Person</a></li>
+                  <li><a class="dropdown-item" href="/Vmenu"><span class="material-symbols-outlined">restaurant_menu</span>Menu</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Features
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/admin"><span class="material-symbols-outlined">account_circle</span>Admin Access</h4></a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="/addusr"><span class="material-symbols-outlined">person_add</span>Add Person</a></li>
+                  <li><a class="dropdown-item" href="/addbrg"><span class="material-symbols-outlined">add_notes</span>Add Menu</a></li>
+                  <li><a class="dropdown-item" href="/Vusr"><span class="material-symbols-outlined">person</span>View Person</a></li>
+                  <li><a class="dropdown-item" href="/Vbrg"><span class="material-symbols-outlined">restaurant_menu</span>View Menu</a></li>
+                </ul>
+              </li>
+          </ul>
+      </div>
+  </div>
+</nav>

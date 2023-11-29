@@ -1,0 +1,57 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block konten %}
+<div class="background">
+<h2 class="align-center">Daftar Menu</h2>
+<p><a href="/addbrg" class="btn btn-primary">tambah menu</a></p>
+{% for message in messages %}
+    {% if message %}
+        <div class="alert alert-success">{{ message }}</div>
+    {% endif %}
+{% endfor %}
+<table class="table table-dark table-striped">
+    <tr>
+        <th>Kode Barang</th>
+        <th>Nama</th>
+        <th>Stok</th>
+        <th>Harga</th>
+        <th>Link Gambar</th>
+        <th>Jenis</th>
+        <th>Aksi</th>
+    </tr>
+
+{% for Barang in barangs %}
+    <tr>
+        <td><a href="{% url 'ubah_brg' Barang.id %}">{{ Barang.kodebrg }}</a></td>
+        <td>{{ Barang.nama }}</td>
+        <td>{{ Barang.stok }}</td>
+        <td>{{ Barang.harga }}</td>
+        <td>{{ Barang.link_gbr }}</td>
+        <!-- jika menampilkan indeks jenis,<td>{{ Barang.jenis_id_id }}</td>-->
+        <td>{{ Barang.jenis_id.nama }}</td>
+        <td><button type="button" class="btn btn-danger" data-bs-toggle="modal"
+            data-bs-target="#hapus-{{ Barang.id }}">Hapus</button></td>
+            <!-- Modal -->
+            <div class="modal fade" id="hapus-{{ Barang.id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Yakin akan dihapus?</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    nama menu : {{ Barang.nama }}
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                    <a href="{% url 'hapus_brg' Barang.id %}" class="btn btn-danger">Yakin</a>
+                    </div>
+                </div>
+                </div>
+            </div>
+    </tr>
+{% endfor %}
+</table>
+</div>
+{% endblock %}
+
